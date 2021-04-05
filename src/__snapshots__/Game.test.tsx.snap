@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Game renders game information 1`] = `
+<DocumentFragment>
+  <div>
+    <h1>
+      Golden Axe
+    </h1>
+    <h2>
+      SMS
+    </h2>
+    <a
+      href="https://www.retrogames.cz/play_037-SegaMS.php"
+      target="_blank"
+    >
+      <img
+        alt="Golden Axe"
+        src="/img/SMS-Golden_Axe.png"
+      />
+    </a>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,5 @@
+{
+    "collectCoverage": true,
+    "clearMocks": true,
+    "setupFilesAfterEnv": [ "<rootDir>/tests/extend.ts" ]
+}
