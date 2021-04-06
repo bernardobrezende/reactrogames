@@ -5,8 +5,8 @@ export default class GamePicker {
 
     games: Game[];
 
-    constructor(games : Game[] | undefined) {
-        this.games = games || [];
+    constructor(games : Game[]) {
+        this.games = games;
     }
 
     pick() : Game {
