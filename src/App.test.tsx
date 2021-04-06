@@ -2,7 +2,6 @@ import { render, screen } from '@testing-library/react';
 import App from './App';
 import * as randomizer from './application/Randomizer';
 
-
 test('renders app title', () => {
   render(<App />);
   const linkElement = screen.getByText(/reactrogames/i);

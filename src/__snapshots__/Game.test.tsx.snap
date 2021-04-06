@@ -11,6 +11,7 @@ exports[`Game renders game information 1`] = `
     </h2>
     <a
       href="https://www.retrogames.cz/play_037-SegaMS.php"
+      rel="noreferrer"
       target="_blank"
     >
       <img

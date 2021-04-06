@@ -1,4 +1,3 @@
-import { Fragment } from 'react';
 import PropTypes, { InferProps } from 'prop-types';
 
 export default function Game({
@@ -11,7 +10,7 @@ export default function Game({
         <div>
             <h1>{title}</h1>
             <h2>{platform}</h2>
-            <a href={url} target="_blank">
+            <a href={url} target="_blank" rel="noreferrer">
                 <img src={`/img/${thumb}`} alt={title}/>
             </a>
         </div>
