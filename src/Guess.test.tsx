@@ -4,9 +4,9 @@ import * as randomizer from './application/Randomizer';
 import { GAMES } from '../tests/fixtures/games';
 
 describe('Guess', () => {
-    it('should randomize game from several options', () => {
+    it('should render game guess with only screenshot and input guess', () => {
         randomizer.getRandomIntBetween = jest.fn(() => 1);
-        const { container } = render(<Guess options={ GAMES } />);
-        expect(container.firstChild).toMatchSnapshot();
+        const { asFragment } = render(<Guess options={ GAMES } />);
+        expect(asFragment()).toMatchSnapshot();
     });
 });

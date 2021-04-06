@@ -1,22 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Guess should randomize game from several options 1`] = `
-<div>
-  <h1>
-    Golden Axe
-  </h1>
-  <h2>
-    SMS
-  </h2>
-  <a
-    href="https://www.retrogames.cz/play_037-SegaMS.php"
-    rel="noreferrer"
-    target="_blank"
-  >
-    <img
-      alt="Golden Axe"
-      src="/img/SMS-Golden_Axe.png"
-    />
-  </a>
-</div>
+exports[`Guess should render game guess with only screenshot and input guess 1`] = `
+<DocumentFragment>
+  <div>
+    <a
+      href="https://www.retrogames.cz/play_037-SegaMS.php"
+      rel="noreferrer"
+      target="_blank"
+    >
+      <img
+        alt="Golden Axe"
+        data-testid="game-screenshot"
+        src="/img/SMS-Golden_Axe.png"
+      />
+    </a>
+  </div>
+</DocumentFragment>
 `;

@@ -1,6 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Game renders game information 1`] = `
+exports[`Game initially renders only screenshot information 1`] = `
+<DocumentFragment>
+  <div>
+    <a
+      href="https://www.retrogames.cz/play_037-SegaMS.php"
+      rel="noreferrer"
+      target="_blank"
+    >
+      <img
+        alt="Golden Axe"
+        data-testid="game-screenshot"
+        src="/img/SMS-Golden_Axe.png"
+      />
+    </a>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Game renders all game information 1`] = `
 <DocumentFragment>
   <div>
     <h1>
@@ -16,6 +34,7 @@ exports[`Game renders game information 1`] = `
     >
       <img
         alt="Golden Axe"
+        data-testid="game-screenshot"
         src="/img/SMS-Golden_Axe.png"
       />
     </a>
