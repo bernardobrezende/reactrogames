@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import RandomGame from './RandomGame';
+import Guess from './Guess';
 
 function App() {
   const games = [
@@ -30,7 +30,7 @@ function App() {
         <p>
           reactrogames
         </p>
-        <RandomGame options={ games } />
+        <Guess options={ games } />
       </header>
     </div>
   );

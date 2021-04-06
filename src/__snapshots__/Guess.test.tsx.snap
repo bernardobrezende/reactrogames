@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`RandomGame should randomize game from several options 1`] = `
+exports[`Guess should randomize game from several options 1`] = `
 <div>
   <h1>
     Golden Axe
