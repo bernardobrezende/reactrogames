@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Guess from './Guess';
 
@@ -8,28 +7,28 @@ function App() {
           title: 'Alex Kidd in Miracle World',
           url: 'https://www.retrogames.cz/play_170-SegaMS.php',
           platform: 'SMS',
+          releasedAt: '1986',
           thumb: 'SMS-Alex_Kidd_in_Miracle_World.gif'
       },
       {
           title: 'Golden Axe',
           url: 'https://www.retrogames.cz/play_037-SegaMS.php',
           platform: 'SMS',
+          releasedAt: '1989',
           thumb: 'SMS-Golden_Axe.png'
       },
       {
           title: 'Super Mario Kart',
           url: 'https://www.retrogames.cz/play_789-SNES.php',
           platform: 'SNES',
+          releasedAt: '1992',
           thumb: 'SNES-Super_Mario_Kart.gif'
       }
   ];
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          reactrogames
-        </p>
+        <h1>reactrogames</h1>
         <Guess options={ games } />
       </header>
     </div>

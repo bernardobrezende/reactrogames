@@ -3,6 +3,7 @@ import PropTypes, { InferProps } from 'prop-types';
 export default function Game({
     title,
     platform,
+    releasedAt,
     thumb,
     url,
     showCompleteDetails
@@ -11,8 +12,8 @@ export default function Game({
         <div>
             { showCompleteDetails &&
                 <>
-                    <h1>{title}</h1>
-                    <h2>{platform}</h2>
+                    <h2>{title}</h2>
+                    <h3>{releasedAt} - {platform}</h3>
                 </>
             }
             <a href={url} target="_blank" rel="noreferrer">
@@ -25,6 +26,7 @@ export default function Game({
 Game.propTypes = {
     title: PropTypes.string.isRequired,
     platform: PropTypes.string.isRequired,
+    releasedAt: PropTypes.string.isRequired,
     thumb: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired,
     showCompleteDetails: PropTypes.bool,

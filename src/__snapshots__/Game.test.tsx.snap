@@ -21,12 +21,12 @@ exports[`Game initially renders only screenshot information 1`] = `
 exports[`Game renders all game information 1`] = `
 <DocumentFragment>
   <div>
-    <h1>
-      Golden Axe
-    </h1>
     <h2>
-      SMS
+      Golden Axe
     </h2>
+    <h3>
+       - SMS
+    </h3>
     <a
       href="https://www.retrogames.cz/play_037-SegaMS.php"
       rel="noreferrer"
