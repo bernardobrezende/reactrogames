@@ -4,9 +4,6 @@ import { GAMES } from '../../tests/fixtures/games';
 
 describe('GamePicker', () => {
     describe('pick', () => {
-        afterEach(() => {
-            randomizer.getRandomIntBetween.mockRestore();
-        })
         it('should pick a game within many options', () => {
             randomizer.getRandomIntBetween = jest.fn(() => 1);
             const picker = new GamePicker(GAMES);
