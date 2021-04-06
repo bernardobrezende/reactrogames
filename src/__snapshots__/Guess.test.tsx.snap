@@ -15,5 +15,10 @@ exports[`Guess should render game guess with only screenshot and input guess 1`]
       />
     </a>
   </div>
+  <input
+    data-testid="txtGuess"
+    placeholder="your guess here"
+    type="text"
+  />
 </DocumentFragment>
 `;
