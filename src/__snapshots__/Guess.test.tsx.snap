@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Guess should render game guess with only screenshot and input guess 1`] = `
+exports[`Guess should render game guess with only screenshot, input guess and pristine guess status 1`] = `
 <DocumentFragment>
   <div>
     <a
@@ -14,6 +14,15 @@ exports[`Guess should render game guess with only screenshot and input guess 1`]
         src="/img/SMS-Golden_Axe.png"
       />
     </a>
+  </div>
+  <div
+    data-testid="guess-status"
+  >
+    <span
+      data-testid="guess-status-pristine"
+    >
+      take your chance!
+    </span>
   </div>
   <input
     data-testid="txtGuess"

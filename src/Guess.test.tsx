@@ -4,20 +4,20 @@ import * as randomizer from './application/Randomizer';
 import { GAMES } from '../tests/fixtures/games';
 
 describe('Guess', () => {
-    it('should render game guess with only screenshot and input guess', () => {
+    it('should render game guess with only screenshot, input guess and pristine guess status', async () => {
         randomizer.getRandomIntBetween = jest.fn(() => 1);
-        const { asFragment } = render(<Guess options={ GAMES } />);
+        const { asFragment, getByTestId } = render(<Guess options={ GAMES } />);
         expect(asFragment()).toMatchSnapshot();
+        expect(await getByTestId("guess-status")).toBeVisible();
     });
     it('should render error message and keep the same game with wrong guess', async () => {
         // TODO: use real impl to simulate random pick and make sure game is not changed
         randomizer.getRandomIntBetween = jest.fn(() => 1);
-        const { getByTestId, getByText } = render(<Guess options={ GAMES } />);
+        const { getByTestId } = render(<Guess options={ GAMES } />);
         const inputGuess = getByTestId(/txtGuess/i);
         fireEvent.change(inputGuess, { target: { value: 'wrong guess' } });
         fireEvent.blur(inputGuess);
-        const errorMessage = await getByText(/❌/i);
-        expect(errorMessage).toBeVisible();
+        expect(await getByTestId(/guess-status-fail/i)).toBeVisible();
     });
     it('should render game information and success indication ✔️ with right guess', async () => {
         randomizer.getRandomIntBetween = jest.fn(() => 1);
