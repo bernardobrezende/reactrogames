@@ -16,10 +16,10 @@ describe('Guess', () => {
         const inputGuess = getByTestId(/txtGuess/i);
         fireEvent.change(inputGuess, { target: { value: 'wrong guess' } });
         fireEvent.blur(inputGuess);
-        const errorMessage = await getByText(/wrong!/i);
+        const errorMessage = await getByText(/❌/i);
         expect(errorMessage).toBeVisible();
     });
-    it('should render game information with right guess', async () => {
+    it('should render game information and success indication ✔️ with right guess', async () => {
         randomizer.getRandomIntBetween = jest.fn(() => 1);
         const { getByTestId, getByText } = render(<Guess options={ GAMES } />);
         const inputGuess = getByTestId(/txtGuess/i);
@@ -27,6 +27,7 @@ describe('Guess', () => {
         fireEvent.blur(inputGuess);
         expect(await getByText(/Golden Axe/i)).toBeVisible();
         expect(await getByText(/SMS/i)).toBeVisible();
+        expect(await getByText(/✔️/i)).toBeVisible();
     });
     it('should render game information with minimum 3 character right guess', async () => {
         randomizer.getRandomIntBetween = jest.fn(() => 1);
@@ -43,7 +44,7 @@ describe('Guess', () => {
         const inputGuess = getByTestId(/txtGuess/i);
         fireEvent.change(inputGuess, { target: { value: 'ax' } });
         fireEvent.blur(inputGuess);
-        const errorMessage = await getByText(/wrong!/i);
+        const errorMessage = await getByText(/❌/i);
         expect(errorMessage).toBeVisible();
     });
 });
