@@ -28,6 +28,7 @@ exports[`Guess should render game guess with only screenshot, input guess and pr
     data-testid="txtGuess"
     placeholder="your guess here"
     type="text"
+    value=""
   />
 </DocumentFragment>
 `;
