@@ -25,7 +25,7 @@ exports[`Guess should render game guess with only screenshot, input guess and pr
     </span>
   </div>
   <input
-    data-testid="txtGuess"
+    data-testid="guess-input"
     placeholder="your guess here"
     type="text"
     value=""
