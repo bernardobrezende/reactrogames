@@ -4,11 +4,11 @@ import { getRandomIntBetween } from './Randomizer';
 export default class GamePicker {
 
     private allGames: Game[];
-    private currentGames: Game[];
+    currentGames: Game[];
 
-    constructor(games : Game[]) {
-        this.currentGames = [ ...games ];
-        this.allGames = [ ...games ];
+    constructor(allGames : Game[], currentGames : Game[]) {
+        this.currentGames = [ ...currentGames ];
+        this.allGames = [ ...allGames ];
     }
 
     private resetGames() : void {
@@ -18,6 +18,7 @@ export default class GamePicker {
     pick() : Game {
         // reset when all games already had picked
         if (this.currentGames.length === 0) {
+            console.log("reset")
             this.resetGames();
         }
         const randomIndex = getRandomIntBetween(0, this.currentGames?.length);
